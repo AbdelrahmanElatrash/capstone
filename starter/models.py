@@ -75,7 +75,7 @@ class Movies(db.Model, Mixin):
         return {
             'id' : self.id ,
             'title': self.title,
-            'release date': self.release_date,
+            'release date': self.release_date
             
         }
     
