@@ -1,0 +1,1551 @@
+{
+	"info": {
+		"_postman_id": "66bf4747-23e0-48a6-953b-4e25821184db",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains actors array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.actors).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/actors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/actors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"actors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1582"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:17:14 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"actors\": [\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 2,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 3,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 4,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 5,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 6,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 7,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 8,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 9,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 10,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 11,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains movies array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.movies).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "544"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:25:08 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movies\": [\n        {\n            \"id\": 1,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 2,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 3,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 4,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 5,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 6,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains actors array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.actors).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "actors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/actors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"actors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1582"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:41:28 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"actors\": [\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 2,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 3,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 4,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 5,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 6,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 7,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 8,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 9,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 10,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 11,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains movies array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.movies).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "544"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:42:32 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movies\": [\n        {\n            \"id\": 1,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 2,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 3,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 4,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 5,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 6,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Leonardo Wilhelm DiCaprio\",\r\n    \"date_of_birth\":\"1974-11-11\",\r\n    \"gender\":\"male\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/actors",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Leonardo Wilhelm DiCaprio\",\r\n    \"date_of_birth\":\"1974-11-11\",\r\n    \"gender\":\"male\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/actors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"actors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:45:48 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"actor\": 17,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"title\":\"titanic\",\r\n   \"release date\":\"1997-12-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/movies",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n   \"title\":\"titanic\",\r\n   \"release date\":\"1997-12-17\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:46:36 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"new_movie\": 7,\n    \"success\": true\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVnQ2k3SHl6YmdROHdBNl9pXzBDYiJ9.eyJpc3MiOiJodHRwczovL2RldmVsb3BtZW50MTcwLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MWY2YmE4NGJkNDk0ZTAwNzA2NTlhNTMiLCJhdWQiOiJteWFwaSIsImlhdCI6MTY0NzcyNjA4NCwiZXhwIjoxNjQ3ODEyMDg0LCJhenAiOiJXZnFJMDN1b29VTkk3aXA2blZaa1FHanlIVkpyR3JKdCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsicG9zdDphY3Rvcl9tb3ZpZSJdfQ.p6xxKbFkqgaBxzTMgiSjDkZKdkUc71rzWSb3qgXJvrKqJtfl7aXcMZ5RjjpVzNlYtQGA36MjS1FG-CZ0ulHt4VDSX2qxNoyRNc2vHg9Ck5kSjSPKU9H6k3nnkgJPdw8XkCt7e9IFT0oaMeqTFcWcIzUb5IBZIjm0Z_c_AxmbtqvoTaMmwRCbv_auagHWB__bUCJzYQ72QRxZP10F6RufgMa1Atjw_62WxJUbOPO-I6l8L7mT7woLZyr3xv590VprI0VB9a1p_X-ZCqoh7nmOuSZGpdFHbRo19Sd3KScp8mRFP73d1IECVYc_9GcH6JJku4G8_2fKe1D3Un7dav_MAA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "owner",
+			"item": [
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains actors array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.actors).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/actors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/actors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"actors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1582"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:51:05 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"actors\": [\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 2,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 3,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 4,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 5,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 6,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 7,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Wed, 01 Jan 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 8,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 9,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 10,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        },\n        {\n            \"date_of_birth\": \"Tue, 01 Apr 2014 00:00:00 GMT\",\n            \"gender\": \"male\",\n            \"id\": 11,\n            \"name\": \"Leonardo Wilhelm DiCaprio\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains movies array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.movies).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "628"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:51:55 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movies\": [\n        {\n            \"id\": 1,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 2,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 3,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 4,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 5,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 6,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        },\n        {\n            \"id\": 7,\n            \"release date\": null,\n            \"title\": \"titanic\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Leonardo Wilhelm DiCaprio\",\r\n    \"date_of_birth\":\"1974-11-11\",\r\n    \"gender\":\"male\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/actors",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Leonardo Wilhelm DiCaprio\",\r\n    \"date_of_birth\":\"1974-11-11\",\r\n    \"gender\":\"male\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/actors",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"actors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:53:11 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"actor\": 18,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"title\":\"titanic\",\r\n   \"release date\":\"1997-12-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/movies",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n   \"title\":\"titanic\",\r\n   \"release date\":\"1997-12-17\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:54:48 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"new_movie\": 8,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/actors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/actors",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/actors/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"actors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:56:59 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deleted\": 1,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/movies",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/movies/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"movies",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:57:31 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deleted\": 1,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date_of_birth\":\"1974-11-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/actors/9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"actors",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/actors",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date_of_birth\":\"1974-11-11\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/actors/9",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"actors",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 22:59:40 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"actor\": 9,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"titanic2\",\r\n   \"release date\":\"2010-08-07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/movies",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"titanic2\",\r\n   \"release date\":\"2010-08-07\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/movies/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"movies",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.7.9"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Mar 2022 23:02:10 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movie\": 3,\n    \"success\": true\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVnQ2k3SHl6YmdROHdBNl9pXzBDYiJ9.eyJpc3MiOiJodHRwczovL2RldmVsb3BtZW50MTcwLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MWVjYzRkOTU5ZTBhOTAwNzFkOTI1NTUiLCJhdWQiOiJteWFwaSIsImlhdCI6MTY0NzcyNTk2MiwiZXhwIjoxNjQ3ODExOTYyLCJhenAiOiJXZnFJMDN1b29VTkk3aXA2blZaa1FHanlIVkpyR3JKdCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9yX21vdmllIiwicGF0Y2hfYWN0b3JfbW92aWUiLCJwb3N0OmFjdG9yX21vdmllIl19.jJ4Ednh0Nv42mXZ1n14VzKszjO0ig_gKtaUKp8FZx70OCco7RnWuoW0N_7_LLiSmJXfIqEt6S6IDcNuDV56i8xQrMq0joNhMq5PimQjrRVLFKAZJI3yfCSU7Z3XuzMoAqnyU92DIlhyyQ9NjPcCx6ipyffiG6Zm4jsHDVqKXsD2VVdCmz6A9dv1VwQ7FlBsEdkcAr_I0H2p3lLjznjYz1KJ9vFbSi5ZwXUqcxXG8tuQ7y9gm54nPd-iSsne9nkZ2YPmN4fpBoFbXMxwB799bQpJ1yFRFZE-i7ypqXXYJjrvxWQWUeGwfHau4PLfWBYT4qS0U9OenUGGgIK-vJueXeg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
